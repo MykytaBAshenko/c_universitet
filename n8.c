@@ -27,20 +27,35 @@ void mx_sort_arr_int(int *arr, int size) {
     }
 }
 
-int main(void) {
+int main(void)
+{
     int aaa[10];
    for (int y = 0; y < 10; y++) {
        aaa[y] = rand()%19;
    }
-   for(int u = 0; u < 10; u++)
-    printf("%d, ", aaa[u] );
+   int lowest = 20;
+   int maximum = 0;
+
+   for(int u = 0; u < 10; u++) {
+       if(aaa[u] < lowest) {
+           lowest = aaa[u];
+       }
+       if(aaa[u] > maximum) {
+           maximum = aaa[u];
+       }
+   }
+   for(int u = 0; u < 10; u++) {
+        printf("%d, ", aaa[u] );
+   }
+        printf("\nMax: %d\n", maximum );
+        printf("Min: %d\n", lowest );
 }
 
 
 
 /* 
 mbashenko-NAU-151.101
-clang n7.c -o n7.out
-./n7.out
+clang n8.c -o n8.out
+./n8.out
 
 */
