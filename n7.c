@@ -8,10 +8,7 @@
  #include <stdio.h>
 
 
-void arrgen(int n, int *nn) {
-    for(int i=0;i<n;i++)
-     nn[i]=rand()%10000000; 
-}
+
 
 void mx_sort_arr_int(int *arr, int size) {
     bool flag = true;
